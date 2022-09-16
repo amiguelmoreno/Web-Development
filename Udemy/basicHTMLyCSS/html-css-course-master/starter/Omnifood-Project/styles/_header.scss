@@ -1,0 +1,72 @@
+.header {
+    position: relative;
+    background-color: #fdf2e9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9.6rem; // Because we want it to be sticky later
+    padding: 0 4.8rem;
+
+    .main-nav {
+        &-list {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 4.8rem;
+
+            .main-nav-link {
+                &:visited,
+                &:link {
+                    display: inline-block;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 1.8rem;
+                    transition: all 0.3s;
+                    color: #333;
+                }
+
+                &:hover,
+                &:active {
+                    color: #cf711f;
+                }
+
+                &.nav-cta {
+                    &:link,
+                    &:visited {
+                        padding: 1.2rem 2.4rem;
+                        border-radius: 9px;
+                        color: #fff;
+                        background-color: #e67e22;
+                    }
+
+                    &:hover,
+                    &:active {
+                        background-color: #cf711f;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        height: 2.2rem;
+    }
+
+    //MOBILE NAV
+
+    .btn-mobile-nav {
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: none;
+        z-index: 9999;
+
+        .icon-mobile-nav {
+            font-size: 4.8rem;
+        }
+
+        .close {
+            display: none;
+        }
+    }
+}
