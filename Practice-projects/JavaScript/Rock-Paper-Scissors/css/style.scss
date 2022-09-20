@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+
+    .container {
+        width: 100vw;
+        min-height: 100vh;
+        padding-top: 4.4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background: radial-gradient(
+            134.34% 134.34% at 50% 0%,
+            #1f3757 0%,
+            #131537
+        );
+
+        .scoreboard {
+            padding: 1rem;
+            margin-bottom: 7rem;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60%;
+            border-radius: 1rem;
+
+            .title {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .score {
+                background-color: white;
+                padding: 0.8rem 1.6rem;
+                border-radius: 1rem;
+                text-align: center;
+
+                &-title {
+                    font-size: 3.2rem;
+                }
+
+                &-value {
+                    font-size: 5.6rem;
+                }
+            }
+        }
+
+        .hands {
+            width: 50rem;
+            height: 38rem;
+            margin-left: 4rem;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            column-gap: 6rem;
+            row-gap: 1rem;
+            flex-wrap: wrap;
+            background-image: url(../assets/triangle.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.3s;
+
+            & > div {
+                cursor: pointer;
+                transition: transform 0.5s;
+
+                img {
+                    width: 80%;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                &:active {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .contest {
+            display: none;
+            align-items: center;
+            column-gap: 8rem;
+
+            .user-pick {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+
+                h2 {
+                    font-size: 3.2rem;
+                    margin-bottom: 3.2rem;
+                }
+            }
+
+            .result {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &-title {
+                    font-size: 4.4rem;
+                    color: white;
+                    letter-spacing: 1px;
+                }
+
+                .btn {
+                    width: 12rem;
+                    padding: 1.2rem;
+                    font-weight: 600;
+                    border-radius: 0.6rem;
+                    border: none;
+                    cursor: pointer;
+                    transition: transform 0.5s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+
+                    &:active {
+                        transform: scale(1.05);
+                    }
+                }
+
+                .new-game {
+                    margin-top: 4.4rem;
+                    margin-bottom: 1.2rem;
+                }
+
+                .reset-game {
+                    background-color: rgb(188, 19, 19);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 57em) {
+    html {
+        font-size: 56.25%;
+    }
+
+    body {
+        .container {
+            .scoreboard {
+                padding: 1rem;
+                margin-bottom: 6rem;
+                width: 90%;
+
+                .title {
+                    img {
+                        width: 70%;
+                    }
+                }
+
+                .score {
+                    &-title {
+                        font-size: 2.4rem;
+                    }
+
+                    &-value {
+                        font-size: 4.4rem;
+                    }
+                }
+            }
+
+            .hands {
+                display: flex;
+                width: 38rem;
+                height: 37rem;
+                margin-left: 0rem;
+
+                & > div {
+                    img {
+                        width: 15rem;
+                    }
+                }
+            }
+
+            .contest {
+                display: none;
+                grid-template-columns: 1fr 1fr;
+                column-gap: 7rem;
+
+                .user-pick {
+                    flex-direction: column;
+
+                    h2 {
+                        font-size: 1.8rem;
+                        margin-bottom: 3.2rem;
+                    }
+
+                    &-img {
+                        img {
+                            width: 15rem;
+                        }
+                    }
+                }
+
+                .result {
+                    order: 3;
+                    grid-column: span 2;
+                    margin-top: 5rem;
+
+                    &-title {
+                        font-size: 3.8rem;
+                    }
+
+                    .btn {
+                        width: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}
