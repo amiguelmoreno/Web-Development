@@ -69,24 +69,29 @@ const game = {
   },
 };
 
-let players1 = game.players[0];
-let players2 = game.players[1];
-console.log(players1, players2);
+// let players1 = game.players[0];
+// let players2 = game.players[1];
+// console.log(players1, players2);
 
-let gk = players1[0];
-console.log(gk);
+// let gk = players1[0];
+// console.log(gk);
 
-let fieldPlayers = players1.concat(players2);
-console.log(fieldPlayers);
+// let fieldPlayers = players1.concat(players2);
+// console.log(fieldPlayers);
 
-let players1Final = players1.concat('Thiago', 'Coutinho', 'Perisic');
-console.log(players1Final);
+// let players1Final = players1.concat('Thiago', 'Coutinho', 'Perisic');
+// console.log(players1Final);
 
-let team1 = game.odds.team1;
-let draw = game.odds.x;
-let team2 = game.odds.team2;
-console.log(team1, team2, draw);
+// let team1 = game.odds.team1;
+// let draw = game.odds.x;
+// let team2 = game.odds.team2;
+// console.log(team1, team2, draw);
 
-const printGoals = (...players) => {
-  let totalGoals = 0;
-};
+// const printGoals = (...players) => {
+//   let totalGoals = 0;
+// };
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  let strFinal = team === 'x' ? 'draw' : `victory ${game[team]} `;
+  console.log(`Odd of ${strFinal} : ${odd}`);
+}
