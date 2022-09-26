@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Simon Game</title>
         <link rel="stylesheet" href="./styles/styles.css" />
+        <script defer src="./index.js"></script>
     </head>
     <body>
         <div class="container">
@@ -14,15 +15,23 @@
             <div class="red-box"></div>
             <div class="green-box"></div>
             <div class="menu">
-                <h1 class="title">SIMON</h1>
+                <h1 class="title">Simon</h1>
                 <div class="scoreboard">
-                    <div class="score">
-                        <h2>SCORE</h2>
-                        <p class="score-value">0</p>
+                    <div class="scores">
+                        <div class="score">
+                            <h2>score</h2>
+                            <p class="score-value">0</p>
+                        </div>
+                        <div class="best-score">
+                            <p class="best-score">
+                                <h2>best score:</h2>
+                                <p class="best-score-value">0</p>
+                            </p>
+                        </div>
                     </div>
                     <div class="buttons">
-                        <button class="start">START</button>
-                        <button class="reset">RESET</button>
+                        <button class="start">start</button>
+                        <button class="reset">reset</button>
                     </div>
                 </div>
             </div>
