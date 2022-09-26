@@ -2,132 +2,140 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Bungee", cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bungee", cursive;
 }
 
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
 }
 body .container {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: 0.2rem solid black;
-  border-radius: 0.5rem;
-  overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 0.2rem solid black;
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 body .container .yellow-box {
-  background-color: rgba(253, 255, 139, 0.8);
-  border: 0.2rem solid black;
-  cursor: pointer;
+    background-color: #fdff8bcc;
+    border: 0.2rem solid black;
+    cursor: pointer;
 }
 body .container .blue-box {
-  background-color: rgba(143, 143, 255, 0.8);
-  border: 0.2rem solid black;
-  cursor: pointer;
+    background-color: #8f8fffcc;
+    border: 0.2rem solid black;
+    cursor: pointer;
 }
 body .container .red-box {
-  background-color: rgba(232, 133, 133, 0.8);
-  border: 0.2rem solid black;
-  cursor: pointer;
+    background-color: #e88585cc;
+    border: 0.2rem solid black;
+    cursor: pointer;
 }
 body .container .green-box {
-  background-color: rgba(85, 149, 85, 0.8);
-  border: 0.2rem solid black;
-  cursor: pointer;
+    background-color: #559555cc;
+    border: 0.2rem solid black;
+    cursor: pointer;
 }
 body .container .menu {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 30rem;
-  padding: 2rem 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 1rem;
-  border: 0.5rem solid black;
-  background-color: rgb(170, 175, 175);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    padding: 2rem 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    border: 0.5rem solid black;
+    background-color: rgb(170, 175, 175);
 }
 body .container .menu .title {
-  text-align: center;
-  font-size: 3.6rem;
-  padding-bottom: 2rem;
+    text-align: center;
+    font-size: 3.6rem;
+    padding-bottom: 2rem;
 }
 body .container .menu .scoreboard {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
 }
 body .container .menu .scoreboard .scores {
-  font-size: 1.6rem;
-  color: rgb(170, 175, 175);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
+    font-size: 1.6rem;
+    color: rgb(170, 175, 175);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
 }
 body .container .menu .scoreboard .scores .score {
-  border-radius: 1rem;
-  padding: 0.7rem;
-  background-color: black;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    background-color: black;
 }
 body .container .menu .scoreboard .scores .score-value {
-  text-align: center;
-  font-size: 3.2rem;
+    text-align: center;
+    font-size: 3.2rem;
 }
 body .container .menu .scoreboard .scores .best-score {
-  font-size: 0.8rem;
-  color: black;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
+    font-size: 0.8rem;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
 }
 body .container .menu .scoreboard .scores .best-score-value {
-  font-size: 1.2rem;
-  text-align: center;
+    font-size: 1.2rem;
+    text-align: center;
 }
 body .container .menu .scoreboard .buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 body .container .menu .scoreboard .buttons button {
-  padding: 0.5rem;
-  border-radius: 0.3rem;
-  border: none;
-  width: 10rem;
-  transition: transform 0.3s;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    border: none;
+    width: 10rem;
+    transition: transform 0.3s;
 }
 body .container .menu .scoreboard .buttons button:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 body .container .menu .scoreboard .buttons button:active {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 body .container .menu .scoreboard .buttons .start {
-  background-image: conic-gradient(rgba(62, 62, 206, 0.5) 0deg, rgba(62, 62, 206, 0.5) 90deg, rgba(13, 157, 13, 0.5) 90deg, rgba(13, 157, 13, 0.5) 180deg, rgba(224, 46, 46, 0.5) 180deg, rgba(224, 46, 46, 0.5) 270deg, rgba(251, 255, 0, 0.5) 270deg);
-  color: black;
-  font-size: 2rem;
+    background-image: conic-gradient(
+        rgba(62, 62, 206, 0.5) 0deg,
+        rgba(62, 62, 206, 0.5) 90deg,
+        rgba(13, 157, 13, 0.5) 90deg,
+        rgba(13, 157, 13, 0.5) 180deg,
+        rgba(224, 46, 46, 0.5) 180deg,
+        rgba(224, 46, 46, 0.5) 270deg,
+        rgba(251, 255, 0, 0.5) 270deg
+    );
+    color: black;
+    font-size: 2rem;
 }
 body .container .menu .scoreboard .buttons .reset {
-  background-color: rgb(255, 72, 72);
-}/*# sourceMappingURL=styles.css.map */
+    background-color: rgb(255, 72, 72);
+} /*# sourceMappingURL=styles.css.map */

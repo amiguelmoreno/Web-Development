@@ -16,26 +16,48 @@ const audiosEl = document.querySelectorAll(".clip");
 const scoreValueEl = document.querySelector(".score-value");
 const bestScoreValueEl = document.querySelector(".best-score-value");
 
+const colorsArr = [yellowEl, blueEl, redEl, greenEl];
+const audioArr = [yellowAudio, blueAudio, redAudio, greenAudio];
+const colorsAnimation = ["yellow", "blue", "red", "green"];
+const colorsOriginal = ["#fdff8bcc", "#8f8fffcc", "#e88585cc", "#559555cc"];
+
 let lightsOrder = [];
 let playerLightsOrder = [];
-let flash;
+let flashNumber;
 let turn;
-let on = true;
 let good;
 let compTurn;
 let intervalId;
 
-startBtn.addEventListener("click", (event) => {
-    play();
-});
+startBtn.addEventListener("click", play);
 
 function play() {
+    resetGame();
+    startBtn.removeEventListener("click", play);
+
+    compGame();
+}
+
+function resetGame() {
     lightsOrder = [];
     playerLightsOrder = [];
-    flash = 0;
+    flashNumber = 0;
     intervalId = 0;
     turn = 1;
-    scoreValueEl.innerHTML = 1;
-    lightsOrder.push(Math.floor(Math.random() * 4) + 1);
+    scoreValueEl.innerHTML = turn;
     compTurn = true;
 }
+
+function compGame() {
+    const timeBtwColors = 500;
+    //lightsOrder.push(Math.floor(Math.random() * 4) + 1);
+    lightsOrder = [3, 1, 0, 2, 3, 0, 2];
+    lightsOrder.forEach(function (color, i) {
+        setTimeout(function () {
+            colorsArr[el].style.backgroundColor = colorsAnimation[el];
+            audioArr[el].play();
+        }, i * timeBtwColors);
+    });
+}
+
+function btnAnimation(el) {}
