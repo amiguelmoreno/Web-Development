@@ -27,9 +27,10 @@ let intervalId;
 
 startBtn.addEventListener("click", (event) => {
     play();
+    startBtn.removeEventListener("click");
 });
 
-function play() {
+const play = function () {
     lightsOrder = [];
     playerLightsOrder = [];
     flash = 0;
@@ -38,4 +39,7 @@ function play() {
     scoreValueEl.innerHTML = 1;
     lightsOrder.push(Math.floor(Math.random() * 4) + 1);
     compTurn = true;
-}
+    intervalId = setInterval(gameTurn, 800);
+};
+
+const gameTurn = function () {};

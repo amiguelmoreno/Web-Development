@@ -257,7 +257,6 @@ body {
   .sec-kpis .kpi {
     margin-bottom: 2rem;
   }
-
   .sec-onboarding .steps {
     flex-direction: column;
   }
@@ -266,7 +265,6 @@ body {
     min-height: 3rem;
     border-left: 3px solid rgb(180, 176, 176);
   }
-
   .sec-footer-cta {
     background-image: none;
   }
