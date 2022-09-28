@@ -21,10 +21,10 @@ const audioArr = [yellowAudio, blueAudio, redAudio, greenAudio];
 const colorsOriginal = ["#fdff8bcc", "#8f8fffcc", "#e88585cc", "#559555cc"]; */
 
 const startBtn = document.querySelector(".start");
-const resetBtn = document.querySelector(".reset");
 const scoreValueEl = document.querySelector(".score-value");
 const bestScoreValueEl = document.querySelector(".best-score-value");
 const soundError = new Audio(`./audios/errorSound.mp3`);
+const soundCorrect = new Audio(`./audios/correctSound.mp3`);
 const tilesContainer = document.querySelector(".tiles-container");
 const colors = ["yellow", "blue", "red", "green"];
 //localStorage.setItem("Best Score", 0);
@@ -33,11 +33,28 @@ let sequence = [];
 let humanSequence = [];
 let level = 0;
 
-resetBtn.addEventListener("click", resetGame);
 const bestScore = localStorage.getItem("Best Score");
-bestScoreValueEl.textContent = bestScore;
-console.log(bestScore);
+bestScoreValueEl.textContent = bestScore || 0;
 
+function correctAnimation() {
+    soundCorrect.play();
+    document.body.style.transitionDuration = "1s";
+    document.body.classList.add("correct");
+    setTimeout(() => {
+        document.body.classList.remove("correct");
+    }, 600);
+}
+
+function errorAnimation() {
+    soundError.play();
+    document.body.style.transitionDuration = "1s";
+    document.body.classList.add("error");
+    setTimeout(() => {
+        document.body.classList.remove("error");
+    }, 600);
+}
+
+//checks the score and update if is bigger
 function checkBestScore(level) {
     if (level > bestScore) {
         localStorage.setItem("Best Score", level);
@@ -46,12 +63,14 @@ function checkBestScore(level) {
 }
 
 function resetGame() {
-    sequence = [];
+    checkBestScore(level);
     humanSequence = [];
+    sequence = [];
     level = 0;
     startBtn.classList.remove("hidden");
     scoreValueEl.textContent = level;
     tilesContainer.classList.add("unclickable");
+    return;
 }
 
 //allow to click colors and change score
@@ -92,8 +111,6 @@ function nextStep() {
 }
 
 function nextRound() {
-    level += 1;
-
     //disable buttons and updating score
     tilesContainer.classList.add("unclickable");
     scoreValueEl.textContent = level;
@@ -130,17 +147,20 @@ function handleClick(tile) {
     sound.play();
 
     if (humanSequence[index] !== sequence[index]) {
-        soundError.play();
-        checkBestScore(level);
-        resetGame();
-        return;
-    }
-
-    if (humanSequence.length === sequence.length) {
+        setTimeout(() => {
+            errorAnimation();
+            checkBestScore(level);
+            resetGame();
+        }, 200);
+    } else if (humanSequence.length === sequence.length) {
         humanSequence = [];
+        setTimeout(() => {
+            correctAnimation();
+        }, 300);
         setTimeout(() => {
             nextRound();
         }, 1000);
+        level += 1;
         return;
     }
 }

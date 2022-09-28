@@ -14,6 +14,16 @@ html {
 }
 
 body {
+    background: linear-gradient(white, grey);
+
+    &.error {
+        background: red;
+    }
+
+    &.correct {
+        background: green;
+    }
+
     //Reusable classes
     .hidden {
         visibility: hidden;
@@ -36,8 +46,8 @@ body {
         padding: 1rem;
         .tiles-container {
             position: relative;
-            height: 40rem;
-            width: 40rem;
+            height: 35rem;
+            width: 35rem;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             border: 0.2rem solid black;
@@ -175,10 +185,6 @@ body {
                         color: black;
                         font-size: 2rem;
                         border: 4px solid black;
-                    }
-
-                    .reset {
-                        background-color: rgb(255, 72, 72);
                     }
                 }
             }
