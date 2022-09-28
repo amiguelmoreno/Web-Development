@@ -13,7 +13,7 @@ const errorAudio = new Audio("./audios/errorSound.mp3");
 
 const audiosEl = document.querySelectorAll(".clip");
 
-const bestScoreValueEl = document.querySelector(".best-score-value");
+
 
 const colorsArr = [yellowEl, blueEl, redEl, greenEl];
 const audioArr = [yellowAudio, blueAudio, redAudio, greenAudio];
@@ -23,13 +23,27 @@ const colorsOriginal = ["#fdff8bcc", "#8f8fffcc", "#e88585cc", "#559555cc"]; */
 const startBtn = document.querySelector(".start");
 const resetBtn = document.querySelector(".reset");
 const scoreValueEl = document.querySelector(".score-value");
+const bestScoreValueEl = document.querySelector(".best-score-value");
 const soundError = new Audio(`./audios/errorSound.mp3`);
 const tilesContainer = document.querySelector(".tiles-container");
 const colors = ["yellow", "blue", "red", "green"];
+//localStorage.setItem("Best Score", 0);
 
 let sequence = [];
 let humanSequence = [];
 let level = 0;
+
+resetBtn.addEventListener("click", resetGame);
+const bestScore = localStorage.getItem("Best Score");
+bestScoreValueEl.textContent = bestScore;
+console.log(bestScore);
+
+function checkBestScore(level) {
+    if (level > bestScore) {
+        localStorage.setItem("Best Score", level);
+    }
+    bestScoreValueEl.textContent = localStorage.getItem("Best Score");
+}
 
 function resetGame() {
     sequence = [];
@@ -117,6 +131,7 @@ function handleClick(tile) {
 
     if (humanSequence[index] !== sequence[index]) {
         soundError.play();
+        checkBestScore(level);
         resetGame();
         return;
     }

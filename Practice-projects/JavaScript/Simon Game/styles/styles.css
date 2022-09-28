@@ -22,6 +22,8 @@ body .unclickable {
 }
 body .container {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 3rem;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -29,8 +31,8 @@ body .container {
 }
 body .container .tiles-container {
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 40rem;
+  width: 40rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border: 0.2rem solid black;
@@ -70,16 +72,16 @@ body .container .tiles-container .green-box.activated {
   background-color: green;
 }
 body .container .menu {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 30rem;
   padding: 2rem 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /*  top: 50%;
+  left: 50%; */
+  /*       transform: translate(-50%, -50%); */
   border-radius: 1rem;
   border: 0.5rem solid black;
   background-color: rgb(170, 175, 175);
@@ -147,6 +149,7 @@ body .container .menu .scoreboard .buttons .start {
   background-image: conic-gradient(rgba(62, 62, 206, 0.5) 0deg, rgba(62, 62, 206, 0.5) 90deg, rgba(13, 157, 13, 0.5) 90deg, rgba(13, 157, 13, 0.5) 180deg, rgba(224, 46, 46, 0.5) 180deg, rgba(224, 46, 46, 0.5) 270deg, rgba(251, 255, 0, 0.5) 270deg);
   color: black;
   font-size: 2rem;
+  border: 4px solid black;
 }
 body .container .menu .scoreboard .buttons .reset {
   background-color: rgb(255, 72, 72);
