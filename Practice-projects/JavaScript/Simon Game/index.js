@@ -31,8 +31,7 @@ let sequence = [];
 let humanSequence = [];
 let level = 0;
 
-function resetGame(text) {
-    alert(text);
+function resetGame() {
     sequence = [];
     humanSequence = [];
     level = 0;
@@ -118,7 +117,7 @@ function handleClick(tile) {
 
     if (humanSequence[index] !== sequence[index]) {
         soundError.play();
-        resetGame("Oops! Game over, you pressed the wrong tile");
+        resetGame();
         return;
     }
 
