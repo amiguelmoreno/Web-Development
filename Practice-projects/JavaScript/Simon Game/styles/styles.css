@@ -12,14 +12,22 @@ html {
   font-size: 62.5%;
 }
 
-body {
+body .hidden {
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0);
+}
+body .unclickable {
+  pointer-events: none;
+}
+body .container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding: 1rem;
 }
-body .container {
+body .container .tiles-container {
   position: relative;
   height: 100%;
   width: 100%;
@@ -29,25 +37,37 @@ body .container {
   border-radius: 0.5rem;
   overflow: hidden;
 }
-body .container .yellow-box {
+body .container .tiles-container .yellow-box {
   background-color: rgba(253, 255, 139, 0.8);
   border: 0.2rem solid black;
   cursor: pointer;
 }
-body .container .blue-box {
+body .container .tiles-container .yellow-box.activated {
+  background-color: yellow;
+}
+body .container .tiles-container .blue-box {
   background-color: rgba(143, 143, 255, 0.8);
   border: 0.2rem solid black;
   cursor: pointer;
 }
-body .container .red-box {
+body .container .tiles-container .blue-box.activated {
+  background-color: blue;
+}
+body .container .tiles-container .red-box {
   background-color: rgba(232, 133, 133, 0.8);
   border: 0.2rem solid black;
   cursor: pointer;
 }
-body .container .green-box {
+body .container .tiles-container .red-box.activated {
+  background-color: red;
+}
+body .container .tiles-container .green-box {
   background-color: rgba(85, 149, 85, 0.8);
   border: 0.2rem solid black;
   cursor: pointer;
+}
+body .container .tiles-container .green-box.activated {
+  background-color: green;
 }
 body .container .menu {
   position: absolute;
@@ -115,7 +135,7 @@ body .container .menu .scoreboard .buttons button {
   border-radius: 0.3rem;
   border: none;
   width: 10rem;
-  transition: transform 0.3s;
+  transition: visibility 0.3s, transform 0.5s;
 }
 body .container .menu .scoreboard .buttons button:hover {
   transform: scale(1.1);

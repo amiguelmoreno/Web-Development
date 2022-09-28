@@ -7,13 +7,16 @@
         <title>Simon Game</title>
         <link rel="stylesheet" href="./styles/styles.css" />
         <script defer src="./index.js"></script>
+        <link rel="shortcut icon" href="#" />
     </head>
     <body>
         <div class="container">
-            <div class="yellow-box"></div>
-            <div class="blue-box"></div>
-            <div class="red-box"></div>
-            <div class="green-box"></div>
+            <div class="tiles-container unclickable">
+                <div id="yellow" class="tile yellow-box"></div>
+                <div id="blue" class="tile blue-box"></div>
+                <div id="red" class="tile red-box"></div>
+                <div id="green" class="tile green-box"></div>
+            </div>
             <div class="menu">
                 <h1 class="title">Simon</h1>
                 <div class="scoreboard">
@@ -23,10 +26,8 @@
                             <p class="score-value">0</p>
                         </div>
                         <div class="best-score">
-                            <p class="best-score">
-                                <h2>best score:</h2>
-                                <p class="best-score-value">0</p>
-                            </p>
+                            <h2>best score:</h2>
+                            <p class="best-score-value">0</p>
                         </div>
                     </div>
                     <div class="buttons">
