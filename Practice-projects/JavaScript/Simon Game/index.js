@@ -1,25 +1,5 @@
 "use strict";
 
-/* //selecting colors buttons and audios
-const yellowEl = document.querySelector(".yellow-box");
-const yellowAudio = new Audio("./audios/simonSound1.mp3");
-const blueEl = document.querySelector(".blue-box");
-const blueAudio = new Audio("./audios/simonSound2.mp3");
-const redEl = document.querySelector(".red-box");
-const redAudio = new Audio("./audios/simonSound3.mp3");
-const greenEl = document.querySelector(".green-box");
-const greenAudio = new Audio("./audios/simonSound4.mp3");
-const errorAudio = new Audio("./audios/errorSound.mp3");
-
-const audiosEl = document.querySelectorAll(".clip");
-
-
-
-const colorsArr = [yellowEl, blueEl, redEl, greenEl];
-const audioArr = [yellowAudio, blueAudio, redAudio, greenAudio];
-
-const colorsOriginal = ["#fdff8bcc", "#8f8fffcc", "#e88585cc", "#559555cc"]; */
-
 const startBtn = document.querySelector(".start");
 const scoreValueEl = document.querySelector(".score-value");
 const bestScoreValueEl = document.querySelector(".best-score-value");
@@ -91,7 +71,7 @@ function activateButton(color) {
 
     setTimeout(() => {
         button.classList.remove("activated");
-    }, 300);
+    }, 400);
 }
 
 //run over the sequence and apply the function to each button
@@ -99,7 +79,7 @@ function playRound(nextSequence) {
     nextSequence.forEach((color, index) => {
         setTimeout(() => {
             activateButton(color);
-        }, (index + 1) * 600);
+        }, (index + 1) * 700);
     });
 }
 
@@ -124,7 +104,7 @@ function nextRound() {
     sequence = [...nextSequence];
     setTimeout(() => {
         humanTurn(level);
-    }, level * 600 + 1000);
+    }, level * 700 + 1000);
 }
 
 //Disable the start button when clicked
@@ -135,7 +115,7 @@ tilesContainer.addEventListener("click", (event) => {
 
     setTimeout(() => {
         event.target.classList.remove("activated");
-    }, 300);
+    }, 400);
     if (tile) handleClick(tile);
 });
 
@@ -151,12 +131,12 @@ function handleClick(tile) {
             errorAnimation();
             checkBestScore(level);
             resetGame();
-        }, 200);
+        }, 400);
     } else if (humanSequence.length === sequence.length) {
         humanSequence = [];
         setTimeout(() => {
             correctAnimation();
-        }, 300);
+        }, 400);
         setTimeout(() => {
             nextRound();
         }, 1000);
