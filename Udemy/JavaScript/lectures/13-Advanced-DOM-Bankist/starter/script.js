@@ -269,3 +269,7 @@ const slider = function () {
   });
 };
 slider();
+
+let num = 1;
+
+console.log(num);
