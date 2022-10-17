@@ -135,8 +135,11 @@ class App {
 
   _hideForm() {
     // Empty inputs
-    inputDistance.value = inputDuration.value = inputCadence.value = inputElevation.value =
-      '';
+    inputDistance.value =
+      inputDuration.value =
+      inputCadence.value =
+      inputElevation.value =
+        '';
 
     form.style.display = 'none';
     form.classList.add('hidden');
@@ -244,7 +247,7 @@ class App {
         </div>
     `;
 
-    if (workout.type === 'running')
+    if (workout.type === 'running') {
       html += `
         <div class="workout__details">
           <span class="workout__icon">⚡️</span>
@@ -258,8 +261,9 @@ class App {
         </div>
       </li>
       `;
+    }
 
-    if (workout.type === 'cycling')
+    if (workout.type === 'cycling') {
       html += `
         <div class="workout__details">
           <span class="workout__icon">⚡️</span>
@@ -273,6 +277,7 @@ class App {
         </div>
       </li>
       `;
+    }
 
     form.insertAdjacentHTML('afterend', html);
   }
