@@ -240,7 +240,7 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .tour:hover .tour__inner {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
 }
 .tour__side {
   position: absolute;
@@ -254,7 +254,7 @@ body {
 }
 .tour__side--back {
   background-color: red;
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
 }
 .tour__side--back-1 {
   background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
