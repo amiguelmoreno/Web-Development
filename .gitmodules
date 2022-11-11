@@ -1,9 +1,3 @@
-[submodule "IOS-Calculator"]
-	path = Projects/IOS-Calculator
-	url = git@github.com:amiguelmoreno/IOS-Calculator.git
-[submodule "42cursus-01-Born2BeRoot"]
-	path = 42cursus-01-Born2BeRoot
-	url = git@github.com:pvaladares/42cursus-01-Born2BeRoot.git
-[submodule "42cursus-02-minitalk"]
-	path = 42cursus-02-minitalk
-	url = git@github.com:pvaladares/42cursus-02-minitalk.git
+[submodule "Projects/IOS-Calculator1"]
+	path = Projects/IOS-Calculator1
+	url = https://github.com/amiguelmoreno/IOS-Calculator
