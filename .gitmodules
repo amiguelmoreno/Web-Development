@@ -1,3 +1,9 @@
 [submodule "Projects/IOS-Calculator"]
 	path = Projects/IOS-Calculator
 	url = https://github.com/amiguelmoreno/IOS-Calculator
+[submodule "Projects/Weather-App"]
+	path = Projects/Weather-App
+	url = https://github.com/amiguelmoreno/Weather-App
+[submodule "Projects/Magic-Home"]
+	path = Projects/Magic-Home
+	url = https://github.com/amiguelmoreno/MagicHome
