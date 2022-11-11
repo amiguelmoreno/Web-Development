@@ -7,3 +7,6 @@
 [submodule "Projects/Magic-Home"]
 	path = Projects/Magic-Home
 	url = https://github.com/amiguelmoreno/MagicHome
+[submodule "Projects/Simon-Game"]
+	path = Projects/Simon-Game
+	url = https://github.com/amiguelmoreno/Simon-Game
