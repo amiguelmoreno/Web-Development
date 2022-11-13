@@ -19,18 +19,27 @@ There are two main directories in this repository:
 <br />
 <br />
 
-### Courses
+# Courses
+<br />
 
 All the courses I have done or that I'm currently doing. This is a list of them:
+
+<br />
 
 * Responsive HTML and CSS websites
 * Advanced CSS and SASS
 * JavaScript Course: From Zero to Expert
 
+<br />
+<br />
 
-### Projects
+# Projects
+
+<br />
 
 Here you have a table with all the project I have done organized by levels:
+
+<br />
 
 | Project | Level | Description |
 | ------ | ------ | ------ |
