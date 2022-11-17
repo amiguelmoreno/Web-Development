@@ -13,3 +13,6 @@
 [submodule "Projects/Projects/Password-Generato"]
 	path = Projects/Projects/Password-Generato
 	url = https://github.com/amiguelmoreno/Password-Generator
+[submodule "Projects/Password-Generator"]
+	path = Projects/Password-Generator
+	url = https://github.com/amiguelmoreno/Password-Generator
