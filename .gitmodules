@@ -10,3 +10,6 @@
 [submodule "Projects/Simon-Game"]
 	path = Projects/Simon-Game
 	url = https://github.com/amiguelmoreno/Simon-Game
+[submodule "Projects/Projects/Password-Generato"]
+	path = Projects/Projects/Password-Generato
+	url = https://github.com/amiguelmoreno/Password-Generator
