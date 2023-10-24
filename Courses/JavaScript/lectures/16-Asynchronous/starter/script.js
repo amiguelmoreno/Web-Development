@@ -81,7 +81,7 @@ TEST DATA: Images in the img folder. Test the error handler by passing a wrong i
 GOOD LUCK 😀
 */
 
-/* const imgContainer = document.querySelector('.images');
+/* const imagesEl = document.querySelector('.images');
 
 const wait = function (seconds) {
   return new Promise(function (resolve) {
@@ -95,13 +95,13 @@ const createImage = function (imgPath) {
     el.src = imgPath;
 
     el.addEventListener('load', function () {
-      imgContainer.append(el);
+      imagesEl.append(el);
       console.log(el);
       resolve(el);
     });
 
     el.addEventListener('error', function () {
-      imgContainer.append(el);
+      imagesEl.append(el);
       console.log(el);
       reject(new Error('Image not found'));
     });
@@ -118,11 +118,20 @@ createImage('./img/img-1.jpg')
   })
   .then(() => {
     currentImg.style.display = 'none';
-    return createImage('./img/img-.jpg');
+    return createImage('./img/img-2.jpg');
   })
   .then(img => {
     currentImg = img;
     console.log('img 2 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+    return createImage('./img/img-3.jpg');
+  })
+  .then(img => {
+    currentImg = img;
+    console.log('img 3 loaded');
     return wait(2);
   })
   .then(() => {
@@ -149,3 +158,103 @@ TEST DATA: ['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']. To test, turn of
 
 GOOD LUCK 😀
 */
+
+const imagesEl = document.querySelector('.images');
+
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+const createImage = function (imgPath) {
+  return new Promise(function (resolve, reject) {
+    const el = document.createElement('img');
+    el.src = imgPath;
+
+    el.addEventListener('load', function () {
+      imagesEl.append(el);
+      console.log(el);
+      resolve(el);
+    });
+
+    el.addEventListener('error', function () {
+      imagesEl.append(el);
+      console.log(el);
+      reject(new Error('Image not found'));
+    });
+  });
+};
+
+/* let currentImg;
+
+createImage('./img/img-1.jpg')
+  .then(img => {
+    currentImg = img;
+    console.log('img 1 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+    return createImage('./img/img-2.jpg');
+  })
+  .then(img => {
+    currentImg = img;
+    console.log('img 2 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+    return createImage('./img/img-3.jpg');
+  })
+  .then(img => {
+    currentImg = img;
+    console.log('img 3 loaded');
+    return wait(2);
+  })
+  .then(() => {
+    currentImg.style.display = 'none';
+  })
+  .catch(err => console.log(err)); */
+
+const loadNPause = async function () {
+  try {
+    // 1
+    let img = await createImage('./img/img-1.jpg');
+    console.log('Image 1 loaded');
+    await wait(2);
+    img.style.display = 'none';
+
+    // 2
+    img = await createImage('./img/img-2.jpg');
+    console.log('Image 2 loaded');
+    await wait(2);
+    img.style.display = 'none';
+
+    // 3
+    img = await createImage('./img/img-3.jpg');
+    console.log('Image 3 loaded');
+    await wait(2);
+    img.style.display = 'none';
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+/* loadNPause(); */
+
+// part 2
+
+const loadAll = async function (imgArr) {
+  try {
+    const imgs = imgArr.map(async img => await createImage(img));
+    console.log(imgs);
+
+    const imgsEl = await Promise.all(imgs);
+    console.log(imgsEl);
+    imgsEl.forEach(img => img.classList.add('parallel'));
+  } catch (err) {
+    console.log(err);
+  }
+};
+loadAll(['img/img-1.jpg', 'img/img-2.jpg', 'img/img-3.jpg']);
