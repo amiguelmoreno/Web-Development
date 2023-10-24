@@ -16,3 +16,6 @@
 [submodule "Projects/Weather-App"]
 	path = Projects/Weather-App
 	url = https://github.com/amiguelmoreno/Weather-App
+[submodule "Projects/Password-Generator2"]
+	path = Projects/Password-Generator2
+	url = https://github.com/amiguelmoreno/Password-Generator
