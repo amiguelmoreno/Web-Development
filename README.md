@@ -12,27 +12,6 @@
   <br />
 </div>
 
-
-## How to navigate?
-
-There are two main directories in this repository:
-<br />
-<br />
-
-# Courses
-<br />
-
-All the courses I have done or that I'm currently doing. This is a list of them:
-
-<br />
-
-* Responsive HTML and CSS websites
-* Advanced CSS and SASS
-* JavaScript Course: From Zero to Expert
-
-<br />
-<br />
-
 # Projects
 
 <br />
