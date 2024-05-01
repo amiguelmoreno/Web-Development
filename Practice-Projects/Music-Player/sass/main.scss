@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(194, 194, 194);
+}
+
+.player {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(160, 160, 160);
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__buttons {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        background-color: transparent;
+        padding: 0.7rem;
+        border: none;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: rgb(122, 122, 122);
+        }
+
+        &:active {
+            margin-top: 10px;
+        }
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: white;
+        }
+    }
+}
+
+.hide {
+    display: none !important;
+}

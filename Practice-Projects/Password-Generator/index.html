@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="./css/style.css" />
+        <script defer src="./index.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="./img/logo.png" alt="logo" />
+            <h1>
+                Password <br />
+                Generator
+            </h1>
+        </header>
+        <div class="container">
+            <div class="container__result">
+                <span id="result"></span>
+                <button class="btn-clipboard" id="clipboard">
+                    <img src="./img/clipboard.png" alt="clipboard" />
+                </button>
+            </div>
+            <div class="container__settings">
+                <label class="setting"
+                    >Password length
+                    <input
+                        type="number"
+                        id="length"
+                        min="4"
+                        max="20"
+                        value="20"
+                /></label>
+
+                <label class="setting"
+                    >Include uppercase letters
+                    <input type="checkbox" id="uppercase" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="setting"
+                    >Include lowercase letters
+                    <input type="checkbox" id="lowercase" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="setting"
+                    >Include numbers
+                    <input type="checkbox" id="number" checked />
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="setting"
+                    >Include symbols
+                    <input type="checkbox" id="symbol" checked />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <button class="btn-generate" id="generate">
+                Generate password
+            </button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>ToDo App</title>
+        <script defer src="./index.js"></script>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="./img/favicon.png" alt="weather app logo" />
+                <h1>To-Do App</h1>
+            </div>
+            <form class="nav__form">
+                <input
+                    type="text"
+                    name="todo"
+                    class="todo-input"
+                    placeholder="Add task..."
+                />
+                <button class="todo-btn">
+                    <svg
+                        class="todo__icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                    >
+                        <path
+                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"
+                        />
+                    </svg>
+                </button>
+            </form>
+        </nav>
+
+        <div class="todo-container">
+            <h2>Tasks</h2>
+            <ul class="todo-list"></ul>
+        </div>
+    </body>
+</html>

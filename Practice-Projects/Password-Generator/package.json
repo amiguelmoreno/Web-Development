@@ -1,0 +1,23 @@
+{
+    "name": "password-generator",
+    "version": "1.0.0",
+    "description": "",
+    "default": "index.html",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "watch:sass": "sass sass/main.scss css/style.css -w"
+    },
+    "author": "Miguel Moreno",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.7.0",
+        "parcel": "^2.0.0-beta.1",
+        "sass": "^1.26.10",
+        "vite": "^4.5.0"
+    },
+    "dependencies": {
+        "regenerator-runtime": "^0.13.10"
+    }
+}

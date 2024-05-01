@@ -1,0 +1,14 @@
+{
+    "name": "to-do-app-js",
+    "version": "1.0.0",
+    "description": "Keep your notes heere and your mind clear",
+    "default": "index.html",
+    "scripts": {
+        "watch:sass": "sass sass/main.scss css/style.css -w"
+    },
+    "author": "Miguel Moreno",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.55.0"
+    }
+}
