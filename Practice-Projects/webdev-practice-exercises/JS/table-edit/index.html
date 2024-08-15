@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla Editable</title>
+    <script defer src="./main.js"></script>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      .edit,
+      .delete {
+        cursor: pointer;
+        padding: 5px 10px;
+        border: none;
+        background-color: #f2f2f2;
+        margin-right: 5px;
+      }
+      .edit:hover {
+        background-color: #d1d1d1;
+      }
+      .delete {
+        color: red;
+      }
+      .delete:hover {
+        background-color: #ffdddd;
+      }
+      .add-row {
+        margin-top: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+      }
+      .add-row:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tabla Editable</h2>
+    <table id="editableTable">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Correo Electrónico</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Las filas se agregarán aquí -->
+      </tbody>
+    </table>
+    <button class="add-row">Agregar Fila</button>
+  </body>
+</html>
