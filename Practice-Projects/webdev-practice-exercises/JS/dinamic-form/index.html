@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Vite App</title>
+    <script defer type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form action="" id="form">
+      <input type="text" id="name" placeholder="name" required />
+
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="email"
+        required
+      />
+
+      <select name="country" id="country" required>
+        <option name="country" id="country"></option>
+        <option value="eeuu">United States</option>
+        <option value="spain">Spain</option>
+        <option value="argentina">Argentina</option>
+      </select>
+
+      <div id="optional-container"></div>
+
+      <!-- 
+      <select name="state" id="state">
+        <option value="texas">Texas</option>
+        <option value="newyork">New York</option>
+        <option value="atlanta">Atlanta</option>
+      </select>
+
+      <select name="city" id="cities-spain">
+        <option value="madrid">Madrid</option>
+        <option value="malaga">Malaga</option>
+        <option value="barcelona">Barcelona</option>
+      </select>
+
+      <select name="city" id="cities-argentina">
+        <option value="buenos-aires">Buenos Aires</option>
+        <option value="cordoba">Córdoba</option>
+        <option value="rosario">Rosario</option>
+        <option value="mendoza">Mendoza</option>
+        <option value="salta">Salta</option>
+      </select> -->
+
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>
